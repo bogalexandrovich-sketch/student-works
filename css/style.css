@@ -1,0 +1,856 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+main {
+    width: 95%;
+    max-width: 1600px;
+    margin: 100px auto 40px auto; /* 100px зверху, щоб не залізало під шапку */
+    padding: 30px;
+
+    /* Робимо підкладку напівпрозорою */
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(10px); /* Ефект матового скла (дуже сучасно!) */
+
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 80vh;
+}
+button {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Щоб картки переносилися на новий рядок */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 10px 0;
+}
+
+.product-card button {
+    width: 100%;
+}
+.tg-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0088cc; /* Фірмовий колір Telegram */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Закруглені краї */
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.tg-button:hover {
+    background-color: #0077b5; /* Трохи темніший при наведенні */
+}
+/* Загальні налаштування, щоб не було зайвих відступів */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px; /* Місце під фіксовану шапку */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Сама шапка */
+.main-header {
+    background-color: #ffffff;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 24px;
+}
+
+.logo-text {
+    font-family: 'Caveat', cursive; /* Підключаємо прописний шрифт */
+    font-size: 32px;               /* Трохи збільшуємо розмір для ефекту */
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 1px;           /* Відстань між буквами */
+    background: linear-gradient(45deg, #2c3e50, #3498db); /* Додамо легкий градієнт */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Робимо текст градієнтним */
+}
+
+/* Додамо невеликий ефект нахилу при наведенні */
+.logo:hover .logo-text {
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+}
+
+/* Навігація */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #3498db;
+}
+
+/* Акцентна кнопка в меню */
+.nav-contact {
+    background-color: #3498db;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: transform 0.2s, background 0.3s !important;
+}
+
+.nav-contact:hover {
+    background-color: #2980b9 !important;
+    transform: translateY(-2px);
+}
+/* Сітка каталогу */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Трохи розширив для кнопок з іконками */
+    gap: 30px;
+    width: 95%;
+    max-width: 1650px;
+    margin: 40px auto;
+    align-items: start;
+}
+/* Сама панель */
+.sidebar {
+    background: rgba(255, 255, 255, 0.05); /* Ледь помітний білий фон */
+    backdrop-filter: blur(10px);           /* Розмиття картинки за панеллю */
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+    position: sticky;                      /* Панель буде "пливти" при скролі */
+    top: 100px;
+}
+
+.sidebar h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Перетворюємо список на кнопки */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Відстань між кнопками */
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1); /* Фон кнопки */
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Ефект при наведенні на кнопку */
+.sidebar ul li a:hover {
+    background: #3498db;      /* Синій колір при наведенні */
+    color: white;
+    transform: translateX(5px); /* Легке зміщення вправо */
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Стиль для активного пункту (якщо захочете виділити поточну сторінку) */
+.sidebar ul li a.active {
+    background: #3498db;
+    border-color: #5dade2;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+/* Тег категорії на картці */
+.category-tag {
+    font-size: 12px;
+    background: #e1f5fe;
+    color: #039be5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.buy-button {
+    display: block;
+    text-align: center;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/* Контейнер для сітки */
+.product-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;    /* Фіксована висота, щоб усі плитки були однакові */
+    transition: 0.3s;
+}
+
+/* Стиль самої картки (окультурений) */
+.product-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    border-color: #3498db;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+.category-tag {
+    font-size: 11px;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #2c3e50;
+    min-height: 50px; /* Тримає заголовок в один розмір */
+}
+
+.product-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    display: block;
+    text-align: center;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.buy-button:hover {
+    background: #2980b9;
+}
+
+/* Адаптація для маленьких екранів */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 в ряд на планшетах */
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* 1 в ряд на телефонах */
+    }
+}
+/* Розтягуємо головний фон майже на весь екран */
+main {
+    max-width: 95%; /* Використовуємо 95% ширини екрана */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    min-height: 100vh;
+}
+
+/* Налаштування сітки 6 колонок */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Рівно 6 колонок */
+    gap: 15px;
+    width: 100%;
+}
+
+/* Компактна картка для формату 6 в ряд */
+.product-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px; /* Менші відступи всередині */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px; /* Трохи менший шрифт */
+    transition: all 0.2s ease;
+}
+
+.product-card h3 {
+    font-size: 15px; /* Зменшуємо заголовок */
+    margin: 5px 0;
+    line-height: 1.2;
+    height: 36px; /* Обмежуємо висоту назви (2 рядки) */
+    overflow: hidden;
+}
+
+.price {
+    font-size: 18px;
+    color: #27ae60;
+    margin: 8px 0;
+}
+
+.buy-button {
+    padding: 8px;
+    font-size: 13px;
+}
+.product-card.empty {
+    border: 1px dashed #444; /* Пунктирна рамка */
+    background: transparent;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    min-height: 250px;
+}
+/* Секція привітання на головній */
+.hero-section {
+    text-align: center;      /* Вирівнює текст h1 та p по центру */
+    padding: 60px 20px;      /* Додаємо простору зверху та знизу */
+    max-width: 800px;        /* Обмежуємо ширину тексту, щоб він краще читався */
+    margin: 0 auto;          /* Центруємо сам блок на сторінці */
+}
+
+.hero-section h1 {
+    font-size: 2.5em;        /* Робимо заголовок соліднішим */
+    margin-bottom: 20px;
+    color: #ffffff;          /* Якщо у вас темний фон, як на скрінах */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #cccccc;          /* Світло-сірий текст для опису */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Центрування кнопки */
+.hero-actions {
+    display: flex;
+    justify-content: center; /* Вирівнює кнопку по центру */
+}
+
+.main-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.main-btn:hover {
+    transform: scale(1.05);  /* Ефект легкого збільшення при наведенні */
+    background-color: #2980b9;
+}
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 0 auto;
+
+    /* Додаємо фон */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/hero-bg.jpg');
+    background-size: cover;       /* Розтягує на всю ширину */
+    background-position: center;  /* Центрує картинку */
+    background-attachment: fixed; /* Ефект паралаксу при скролі */
+
+    border-radius: 15px;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Тінь для кращої читаємості */
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 0 auto;
+
+    /* Додаємо фон */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/hero-bg.jpg');
+    background-size: cover;       /* Розтягує на всю ширину */
+    background-position: center;  /* Центрує картинку */
+    background-attachment: fixed; /* Ефект паралаксу при скролі */
+
+    border-radius: 15px;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Тінь для кращої читаємості */
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+body {
+    /* Шлях до вашого зображення */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/hero-bg.jpg');
+
+    /* Фіксуємо фон, щоб він не скролився разом з контентом */
+    background-attachment: fixed;
+
+    /* Розтягуємо на весь екран без повторів */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Скидаємо відступи */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+/* 1. Головний фон на все тіло сайту */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/hero-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: white; /* Весь текст тепер буде білим, щоб його було видно */
+    font-family: sans-serif;
+}
+
+/* 2. Виправляємо підкладку (main) */
+main {
+    width: 95%;
+    max-width: 1600px;
+    margin: 80px auto;
+    padding: 20px;
+
+    /* ПРИБИРАЄМО БІЛИЙ ФОН ТУТ */
+    background: transparent;
+
+    min-height: 100vh;
+}
+
+/* 3. Картки робіт (робимо їх темними або напівпрозорими) */
+.product-card {
+    background: rgba(255, 255, 255, 0.1); /* Ледь помітне скло */
+    backdrop-filter: blur(5px);           /* Розмиття фону під карткою */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* 4. Порожні клітинки */
+.product-card.empty {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+.main-header {
+    background: rgba(0, 0, 0, 0.8); /* Темна прозора шапка */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav a {
+    color: white !important;
+}
+
+.logo-text {
+    /* Ваш красивий шрифт Caveat буде білим */
+    -webkit-text-fill-color: white !important;
+}
+/* Загальні налаштування для контенту головної */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #fff, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Сітка переваг */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Блок "Про нас" у скляному стилі */
+.about-glass {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    line-height: 1.8;
+}
+
+.about-glass h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+/* Кнопка */
+.main-btn {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    color: white;
+    padding: 18px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.5);
+}
+
+/* Футер */
+.main-footer {
+    padding: 40px;
+    background: rgba(0,0,0,0.8);
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+/* Спеціальні стилі для сторінки контактів */
+.contact-card {
+    margin-top: 50px;
+    padding: 60px 40px !important;
+}
+
+.personal-note {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+/* Велика кнопка Telegram */
+.tg-big-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0088cc, #00a2ed);
+    color: white !important;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.4);
+}
+
+.tg-big-button:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 136, 204, 0.6);
+}
+
+.tg-icon {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.tg-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.tg-top {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.tg-username {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Вирівнювання заголовків на сторінці */
+.contact-page h1 {
+    margin-bottom: 20px;
+}
+/* Неоновий ефект для кнопки Telegram */
+.tg-big-button {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 136, 204, 0.5);
+    transition: all 0.4s ease !important;
+}
+
+.tg-main-label {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* М'яке світіння тексту */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.tg-big-button:hover {
+    /* Потужне неонове світіння всієї кнопки при наведенні */
+    box-shadow: 0 0 25px rgba(0, 136, 204, 0.8),
+    0 0 50px rgba(0, 136, 204, 0.4);
+    background: linear-gradient(135deg, #0099ff, #00d4ff);
+    transform: translateY(-5px) scale(1.03);
+}
+
+/* Ефект "відблиску", що пробігає по кнопці */
+.tg-big-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+                                transparent
+    );
+    transition: 0.6s;
+}
+
+.tg-big-button:hover::before {
+    left: 100%;
+}.card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.demo-btn {
+    display: block;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #3498db;
+    text-decoration: none;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.demo-btn:hover {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+/* Основний стиль картки */
+.product-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    position: relative;
+    /* Плавність переходу для всіх ефектів */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+/* Ефект при наведенні (Zoom + Світіння) */
+.product-card:hover {
+    transform: scale(1.05); /* Збільшення на 5% */
+    background: rgba(255, 255, 255, 0.08); /* Трохи світліший фон */
+    border-color: rgba(52, 152, 219, 0.5); /* Синій колір рамки (як у Telegram кнопки) */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(52, 152, 219, 0.2); /* М'яка тінь та неон */
+    z-index: 10; /* Щоб картка була над іншими при збільшенні */
+}
+
+/* Окремий стиль для порожніх карток, щоб вони не так сильно "грали" */
+.product-card.empty:hover {
+    transform: scale(1.02);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Стиль тексту всередині карти при наведенні */
+.product-card:hover h3 {
+    color: #3498db;
+    transition: 0.3s;
+}
