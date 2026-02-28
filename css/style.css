@@ -853,4 +853,128 @@ main {
 .product-card:hover h3 {
     color: #3498db;
     transition: 0.3s;
+}/* --- СТИЛІ БЛОКУ РОЗРОБКИ ТА TG --- */
+.dev-status-container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dev-status-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px dashed rgba(52, 152, 219, 0.4);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 850px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dev-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dev-header h2 {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin: 0;
+}
+
+.gear-icon {
+    font-size: 2.2rem;
+    display: inline-block;
+    animation: spin-gear 4s linear infinite;
+}
+
+@keyframes spin-gear {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.dev-info-text p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Блок терміновості */
+.urgent-notice-box {
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.urgent-notice-box p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Кнопка Telegram */
+.tg-urgent-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #0088cc;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 20px rgba(0, 136, 204, 0.4);
+    animation: pulse-tg 2s infinite;
+}
+
+.tg-urgent-btn:hover {
+    background: #00a2f5;
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.6);
+}
+
+@keyframes pulse-tg {
+    0% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 136, 204, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+}
+
+/* Прогрес бар */
+.progress-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #3498db, #a29bfe);
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5px;
+}.progress-fill {
+    background: linear-gradient(90deg, #3498db, #9b59b6);
+    width: 15%; /* Твоя чесна цифра */
+    height: 100%;
+    border-radius: 10px;
 }
