@@ -978,3 +978,67 @@ main {
     height: 100%;
     border-radius: 10px;
 }
+/* 1. Глобальне правило: щоб відступи не розпирали блоки */
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Контейнери робимо гумовими */
+.header-container, .home-container, .catalog-layout {
+    width: 100%;
+    max-width: 1200px; /* Максимум на комп'ютері */
+    margin: 0 auto;
+    padding: 0 15px; /* Відступи від країв на телефоні */
+}
+
+/* 3. Головна магія: Адаптивність через Media Queries */
+
+/* Якщо екран менше 768px (планшети та телефони) */
+@media (max-width: 768px) {
+
+    /* Хедер: лого зверху, меню знизу */
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Сітка з картками: робимо в одну колонку */
+    .features-grid, .products-grid {
+        grid-template-columns: 1fr !important; /* Форсуємо одну колонку */
+        gap: 20px;
+    }
+
+    /* Hero секція: зменшуємо текст, щоб не вилазив */
+    .glitch-text {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+
+    /* Блок про розробку: прибираємо зайві відступи */
+    .dev-status-card {
+        padding: 20px;
+    }
+
+    .dev-header h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Сайдбар у каталозі (якщо він є): виносимо над контентом */
+    .catalog-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
