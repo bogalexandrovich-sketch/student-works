@@ -2,84 +2,9 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ПРАВО</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
-
-    <style>
-        /* Адаптивні стилі для мобілок */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-
-            .catalog-layout {
-                display: flex;
-                flex-direction: column; /* Ставимо бокове меню зверху, контент знизу */
-                padding: 10px;
-            }
-
-            .sidebar {
-                width: 100% !important;
-                margin-bottom: 20px;
-                border-right: none !important;
-                border-bottom: 2px solid #3498db;
-                padding-bottom: 15px;
-            }
-
-            .sidebar ul {
-                display: flex;
-                flex-wrap: wrap; /* Предмети будуть йти плиткою, а не довгим списком */
-                gap: 10px;
-                padding: 0;
-                list-style: none;
-                justify-content: center;
-            }
-
-            .sidebar li {
-                margin: 0 !important;
-            }
-
-            .sidebar a {
-                display: inline-block;
-                padding: 8px 12px;
-                background: #f8f9fa;
-                border-radius: 5px;
-                font-size: 0.9rem;
-            }
-
-            .content-area {
-                width: 100% !important;
-            }
-
-            .products-grid {
-                display: grid;
-                grid-template-columns: 1fr !important; /* Одна картка на рядок */
-                gap: 20px;
-            }
-
-            .product-card {
-                margin: 0 auto;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            .main-nav {
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-                width: 100%;
-            }
-
-            .main-nav a {
-                font-size: 0.9rem;
-                padding: 5px 10px;
-            }
-        }
-    </style>
 </head>
 <body class="category-page">
     <header class="main-header">
@@ -98,10 +23,10 @@
 
     <main class="catalog-layout">
         <aside class="sidebar">
-            <h3 style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: #3498db;">Предмети</h3>
+                <h3 style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: #3498db;">Предмети</h3>
             <ul>
                 <li><a href="index.html" class="active">⚖️ Право</a></li>
-                <li><a href="../02_Economika/index.html">📈 Економіка</a></li>
+                <li><a href="../02_Economika/index.html"">📈 Економіка</a></li>
                 <li><a href="../03_Psykhologiia/index.html">🧠 Психологія</a></li>
                 <li><a href="../04_Menedzhment/index.html">💼 Менеджмент</a></li>
                 <li><a href="../05_Filolohiia/index.html">📖 Філологія</a></li>
@@ -116,49 +41,49 @@
         <section class="content-area">
             <h2>Розділ: ПРАВО</h2>
             <section class="products-grid">
-                <div class="product-card">
-                    <span class="category-tag">ПРАВО</span>
-                    <h3>Реферат: Джерела права</h3>
-                    <p>Поняття, види та загальна характеристика (9 ст.)</p>
+<div class="product-card">
+    <span class="category-tag">ПРАВО</span>
+    <h3>Реферат: Джерела права</h3>
+    <p>Поняття, види та загальна характеристика (9 ст.)</p>
 
-                    <div class="card-actions">
-                        <a href="../../files/previews/demo-dzherela-prava.pdf" target="_blank" class="demo-btn">
-                            📄 Переглянути демо
-                        </a>
+    <div class="card-actions">
+        <a href="../../files/previews/demo-dzherela-prava.pdf" target="_blank" class="demo-btn">
+            📄 Переглянути демо
+        </a>
 
-                        <div class="price">350 грн</div>
-                        <a href="https://t.me/Slowed_to_perfection" class="buy-button">Замовити</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <span class="category-tag">ПРАВО</span>
-                    <h3>Конспект лекцій: Джерела та форма права</h3>
-                    <p>Поняття, класифікація, поняття... (1 ст.)</p>
-                    <p>Натисніть ЗАБРАТИ -> ПКМ -> Зберегти як...</p>
+        <div class="price">350 грн</div>
+        <a href="https://t.me/Slowed_to_perfection" class="buy-button">Замовити</a>
+    </div>
+</div>
+<div class="product-card">
+    <span class="category-tag">ПРАВО</span>
+    <h3>Конспект лекцій: Джерела та форма права</h3>
+    <p>Поняття, класифікація, поняття... (1 ст.)</p>
+    <p>Натисніть ЗАБРАТИ -> ПКМ -> Зберегти як...</p>
 
-                    <div class="card-actions">
-                        <a href="../../files/previews/konspekt_pravo.pdf" target="_blank" class="demo-btn">
-                            📄 ЗАБРАТИ
-                        </a>
+    <div class="card-actions">
+        <a href="../../files/previews/konspekt_pravo.pdf" target="_blank" class="demo-btn">
+            📄 ЗАБРАТИ
+        </a>
 
-                        <div class="price">БЕЗКОШТОВНО</div>
-                        <a href="https://t.me/Slowed_to_perfection" class="buy-button">Замовити</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <span class="category-tag">ПРАВО</span>
-                    <h3>Курсова: Право людини</h3>
-                    <p>Теоретико-правові засади, Еволюція ідей, Класифікація, Механізми.... (16 ст.)</p>
+        <div class="price">БЕЗКОШТОВНО</div>
+        <a href="https://t.me/Slowed_to_perfection" class="buy-button">Замовити</a>
+    </div>
+</div>
+<div class="product-card">
+    <span class="category-tag">ПРАВО</span>
+    <h3>Курсова: Право людини</h3>
+    <p>Теоретико-правові засади, Еволюція ідей, Класифікація, Механізми.... (16 ст.)</p>
 
-                    <div class="card-actions">
-                        <a href="../../files/previews/demo-pravo-lyudyny.pdf" target="_blank" class="demo-btn">
-                            📄 Переглянути демо
-                        </a>
+    <div class="card-actions">
+        <a href="../../files/previews/demo-pravo-lyudyny.pdf" target="_blank" class="demo-btn">
+            📄 Переглянути демо
+        </a>
 
-                        <div class="price">Від 500 грн</div>
-                        <a href="https://t.me/Slowed_to_perfection" class="buy-button">Замовити</a>
-                    </div>
-                </div>
+        <div class="price">Від 500 грн</div>
+        <a href="https://t.me/Slowed_to_perfection" class="buy-button">Замовити</a>
+    </div>
+</div>
             </section>
         </section>
     </main>

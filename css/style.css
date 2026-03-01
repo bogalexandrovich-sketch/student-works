@@ -1187,22 +1187,3 @@ body {
         padding: 40px 5px;
     }
 }
-/* Основні стилі для ПК (те, що вже є) */
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-/* Адаптація під мобільні (додаємо цей блок) */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    /* Ховаємо або перебудовуємо меню, блоки в колонку тощо */
-    .sidebar, .content {
-        width: 100%;
-        float: none;
-    }
-}
