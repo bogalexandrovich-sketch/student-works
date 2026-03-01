@@ -1187,3 +1187,89 @@ body {
         padding: 40px 5px;
     }
 }
+.price {
+    font-weight: bold;
+    color: #e74c3c; /* Червоний колір привертає увагу */
+    font-size: 1.2rem;
+    background: #fdf2f2;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.black-glass-footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+
+    /* Ефект чорного скла */
+    background: rgba(0, 0, 0, 0.85); /* Глибокий чорний, майже непрозорий */
+    backdrop-filter: blur(12px); /* Сильне розмиття фону */
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Тонка біла окантовка зверху, щоб відбити футер від фону */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff; /* Чистий білий текст */
+}
+
+.footer-text {
+    font-size: 1.05rem;
+    margin: 0 0 8px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.author-name {
+    color: #3498db; /* Твій фірмовий блакитний для імені Олени */
+    font-weight: bold;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5); /* Приглушений копірайт */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.black-glass-footer {
+    margin-top: 50px;
+    padding: 25px 0;
+
+    /* Центрування всього футера */
+    display: flex;
+    flex-direction: column; /* Елементи один під одним */
+    align-items: center;    /* Центрування по горизонталі */
+    justify-content: center; /* Центрування по вертикалі */
+    width: 100%;           /* Щоб він займав усю ширину і міг центрувати контент */
+
+    /* Ефект чорного скла */
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    box-sizing: border-box; /* Щоб падінги не розширювали футер за межі екрана */
+    border-top: 3px solid transparent; /* робимо основу */
+    border-image: linear-gradient(to right, #0057b7 50%, #ffd700 50%); /* синій і жовтий навпіл */
+    border-image-slice: 1;
+}
+}
+
+.footer-content {
+    text-align: center; /* Додаткова страховка для тексту всередині */
+}
+
+.footer-text {
+    font-size: 1.05rem;
+    margin: 0 0 10px 0;
+}
+
+.author-name {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
